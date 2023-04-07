@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "polygonio/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "polygonio"
+  spec.name          = "polygonio-ruby"
   spec.version       = Polygonio::VERSION
   spec.authors       = ["Anthony Eufemio"]
   spec.email         = ["ace@135.io"]
