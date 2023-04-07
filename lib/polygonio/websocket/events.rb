@@ -30,6 +30,36 @@ module Polygonio
       attribute :s, Types::Integer           # Tick Start Timestamp
     end
 
+
+    class StockTradeEvent < Dry::Struct
+      attribute :ev, Types::String.enum("T")
+      attribute :sym, Types::String
+      attribute? :i, Types::String           # Trade ID
+      attribute :x, Types::Integer          # Exchange ID
+      attribute :p, Types::JSON::Decimal    # Price
+      attribute? :c, Types::Array
+      attribute :s, Types::Integer   # Size
+      attribute :t, Types::Integer          # Exchange Timestamp Unix ( ms )
+      attribute :q, Types::Integer          # Exchange ID
+      attribute :z, Types::Integer          #(1 = NYSE, 2 = AMEX, 3 = Nasdaq)
+      attribute? :trfi, Types::Integer      #(1 = NYSE, 2 = AMEX, 3 = Nasdaq)
+      attribute? :trft, Types::Integer      #(1 = NYSE, 2 = AMEX, 3 = Nasdaq)
+    end    
+    class StockQuoteEvent < Dry::Struct
+      attribute :ev, Types::String.enum("Q")
+      attribute :sym, Types::String
+      attribute? :bx, Types::Integer
+      attribute? :bp, Types::JSON::Decimal         # Exchange ID
+      attribute? :bs, Types::Integer
+      attribute? :ax, Types::Integer
+      attribute? :ap, Types::JSON::Decimal
+      attribute? :as, Types::Integer
+      attribute? :i, Types::Array.of(Types::Integer)
+      attribute :t, Types::Integer          # Exchange Timestamp Unix ( ms )
+      attribute :q, Types::Integer          # Exchange ID
+      attribute :z, Types::Integer          # Exchange ID
+    end    
+
     class CryptoQuoteEvent < Dry::Struct
       attribute :ev, Types::String.enum("XQ")
       attribute :pair, Types::String

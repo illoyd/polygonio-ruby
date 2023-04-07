@@ -98,6 +98,14 @@ module Polygonio
           CryptoSipEvent.new(event)
         when "XL2"
           CryptoLevel2Event.new(event)
+        when "T"
+          StockTradeEvent.new(event)
+        when "AM"
+          StockTradeEvent.new(event)
+        when "A"
+          StockTradeEvent.new(event)
+        when "Q"
+          StockQuoteEvent.new(event)
         else
           raise UnrecognizedEventError.new(event), "Unrecognized event with type: #{event.ev}"
         end
