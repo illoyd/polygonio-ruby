@@ -30,6 +30,44 @@ module Polygonio
       attribute :s, Types::Integer           # Tick Start Timestamp
     end
 
+    class StockAggregatePerSecondEvent < Dry::Struct
+      attribute :ev, Types::String.enum("A") # Event Type
+      attribute :sym, Types::String          # Symbol
+      attribute :v, Types::Integer           # Volume
+      attribute :av, Types::Integer          # Accumulated Volume
+      attribute :op, Types::JSON::Decimal    # Official Opening Price
+      attribute :vw, Types::JSON::Decimal    # Volume Weighted Average Price
+      attribute :o, Types::JSON::Decimal     # Opening Price
+      attribute :h, Types::JSON::Decimal     # High Price
+      attribute :l, Types::JSON::Decimal     # Low Price
+      attribute :c, Types::JSON::Decimal     # Close Price
+      attribute :a, Types::Integer           # Today's Volume weighted average price
+      attribute :z, Types::Integer           # Average trade size
+      attribute :s, Types::Integer           # Starting tick timestamp
+      attribute :e, Types::Integer           # Ending tick timestamp
+      attribute :otc, Types::Boolean         # Whether or not this aggregate is for an OTC ticker.
+    end
+
+ 
+    class StockAggregatePerMinuteEvent < Dry::Struct
+      attribute :ev, Types::String.enum("AM") # Event Type
+      attribute :sym, Types::String          # Symbol
+      attribute :v, Types::Integer           # Volume
+      attribute :av, Types::Integer          # Accumulated Volume
+      attribute :op, Types::JSON::Decimal    # Official Opening Price
+      attribute :vw, Types::JSON::Decimal    # Volume Weighted Average Price
+      attribute :o, Types::JSON::Decimal     # Opening Price
+      attribute :h, Types::JSON::Decimal     # High Price
+      attribute :l, Types::JSON::Decimal     # Low Price
+      attribute :c, Types::JSON::Decimal     # Close Price
+      attribute :a, Types::Integer           # Today's Volume weighted average price
+      attribute :z, Types::Integer           # Average trade size
+      attribute :s, Types::Integer           # Starting tick timestamp
+      attribute :e, Types::Integer           # Ending tick timestamp
+      attribute :otc, Types::Boolean         # Whether or not this aggregate is for an OTC ticker.
+    end 
+
+    end
 
     class StockTradeEvent < Dry::Struct
       attribute :ev, Types::String.enum("T")

@@ -101,9 +101,9 @@ module Polygonio
         when "T"
           StockTradeEvent.new(event)
         when "AM"
-          StockTradeEvent.new(event)
+          StockAggregatePerMinuteEvent.new(event)
         when "A"
-          StockTradeEvent.new(event)
+          StockAggregatePerSecondEvent.new(event)
         when "Q"
           StockQuoteEvent.new(event)
         else
