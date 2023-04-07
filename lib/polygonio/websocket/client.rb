@@ -127,6 +127,7 @@ module Polygonio
 
     class Client
       BASE_URL = "wss://socket.polygon.io/"
+      BASE_URL_DELAYED = "wss://delayed.polygon.io/"
 
       def initialize(path, api_key, opts = {})
         path = Types::Coercible::String.enum("stocks", "forex", "crypto")[path]
@@ -134,7 +135,11 @@ module Polygonio
         @api_key = api_key
         @ws = nil
         @opts = opts
-        @url = "#{BASE_URL}#{path}"
+        if opts.fetch(:delayed) == true
+          @url = "#{BASE_URL_DELAYED}#{path}"
+        else
+          @url = "#{BASE_URL}#{path}"
+        end
       end
 
       def subscribe(channels, &block)
