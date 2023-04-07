@@ -45,7 +45,7 @@ module Polygonio
       attribute :z, Types::Integer           # Average trade size
       attribute :s, Types::Integer           # Starting tick timestamp
       attribute :e, Types::Integer           # Ending tick timestamp
-      attribute :otc, Types::Boolean         # Whether or not this aggregate is for an OTC ticker.
+      attribute :otc, Types::Bool         # Whether or not this aggregate is for an OTC ticker.
     end
 
  
@@ -64,7 +64,7 @@ module Polygonio
       attribute :z, Types::Integer           # Average trade size
       attribute :s, Types::Integer           # Starting tick timestamp
       attribute :e, Types::Integer           # Ending tick timestamp
-      attribute :otc, Types::Boolean         # Whether or not this aggregate is for an OTC ticker.
+      attribute :otc, Types::Bool         # Whether or not this aggregate is for an OTC ticker.
     end 
 
     class StockTradeEvent < Dry::Struct
