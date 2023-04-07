@@ -135,7 +135,8 @@ module Polygonio
         @api_key = api_key
         @ws = nil
         @opts = opts
-        if opts.fetch(:delayed) == true
+        delayed = opts.fetch(:delayed) { false }
+        if delayed
           @url = "#{BASE_URL_DELAYED}#{path}"
         else
           @url = "#{BASE_URL}#{path}"
