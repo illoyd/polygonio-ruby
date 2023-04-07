@@ -82,7 +82,6 @@ module Polygonio
           if event.fetch(:status) == "error" && event.fetch(:message) == "not authorized"
             raise NotAuthorizedError, event.fetch(:message)
           end
-
           WebsocketEvent.new(event)
         when "C"
           ForexQuoteEvent.new(event)

@@ -67,8 +67,6 @@ module Polygonio
       attribute :otc, Types::Boolean         # Whether or not this aggregate is for an OTC ticker.
     end 
 
-    end
-
     class StockTradeEvent < Dry::Struct
       attribute :ev, Types::String.enum("T")
       attribute :sym, Types::String
