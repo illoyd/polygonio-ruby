@@ -48,3 +48,13 @@ Polygonio::Websocket::Client.new("crypto", api_key).subscribe("XQ.BTC-USD") do |
   pp event
 end
 ```
+
+Using delayed websockets.  If your account only supports delayed feeds you will need to use the delayed websocket endpoint
+
+```
+Polygonio::Websocket::Client.new("stocks", api_key, delayed: true).subscribe("AM.*,A.*,T.*") do |event|
+  pp "Incoming message"
+  pp event
+end
+```
+
