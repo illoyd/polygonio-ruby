@@ -134,6 +134,7 @@ module Polygonio
 
         @api_key = api_key
         @ws = nil
+        opts[:comm_inactivity_timeout] = 0
         @opts = opts
         delayed = opts.fetch(:delayed) { false }
         if delayed

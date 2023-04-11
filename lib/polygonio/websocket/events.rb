@@ -41,8 +41,8 @@ module Polygonio
       attribute? :h, Types::JSON::Decimal     # High Price
       attribute? :l, Types::JSON::Decimal     # Low Price
       attribute? :c, Types::JSON::Decimal     # Close Price
-      attribute? :a, Types::Integer           # Today's Volume weighted average price
-      attribute? :z, Types::Integer           # Average trade size
+      attribute? :a, Types::JSON::Decimal     # Today's Volume weighted average price
+      attribute? :z, Types::JSON::Decimal           # Average trade size
       attribute? :s, Types::Integer           # Starting tick timestamp
       attribute? :e, Types::Integer           # Ending tick timestamp
       attribute? :otc, Types::Bool         # Whether or not this aggregate is for an OTC ticker.
@@ -60,8 +60,8 @@ module Polygonio
       attribute? :h, Types::JSON::Decimal     # High Price
       attribute? :l, Types::JSON::Decimal     # Low Price
       attribute? :c, Types::JSON::Decimal     # Close Price
-      attribute? :a, Types::Integer           # Today's Volume weighted average price
-      attribute? :z, Types::Integer           # Average trade size
+      attribute? :a, Types::JSON::Decimal           # Today's Volume weighted average price
+      attribute? :z, Types::JSON::Decimal           # Average trade size
       attribute? :s, Types::Integer           # Starting tick timestamp
       attribute? :e, Types::Integer           # Ending tick timestamp
       attribute? :otc, Types::Bool         # Whether or not this aggregate is for an OTC ticker.
