@@ -30,24 +30,24 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "activesupport", [">= 6.0.2.2"]
-  spec.add_runtime_dependency "dry-struct", [">= 1.2.0"]
-  spec.add_runtime_dependency "dry-types", [">= 1.2.2"]
-  spec.add_runtime_dependency "eventmachine", [">= 1.2.7"]
-  spec.add_runtime_dependency "faraday", [">= 0.17.3"]
-  spec.add_runtime_dependency "faraday_middleware", [">= 0.13.1"]
-  spec.add_runtime_dependency "faraday_middleware-parse_oj", [">= 0.3.2"]
-  spec.add_runtime_dependency "oj", [">= 3.10.1"]
-  spec.add_runtime_dependency "permessage_deflate", [">= 0.1.4"]
-  spec.add_runtime_dependency "websocket-driver", [">= 0.7.1"]
+  spec.add_runtime_dependency "activesupport"
+  spec.add_runtime_dependency "dry-struct"
+  spec.add_runtime_dependency "dry-types"
+  spec.add_runtime_dependency "eventmachine"
+  spec.add_runtime_dependency "faraday"
+  spec.add_runtime_dependency "faraday_middleware"
+  spec.add_runtime_dependency "faraday_middleware-parse_oj"
+  spec.add_runtime_dependency "oj"
+  spec.add_runtime_dependency "permessage_deflate"
+  spec.add_runtime_dependency "websocket-driver"
 
-  spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "bundler-audit", "~> 0.6"
-  spec.add_development_dependency "dotenv", "~> 2.7"
-  spec.add_development_dependency "faker", "~> 2.11"
-  spec.add_development_dependency "minitest", "~> 5.0"
-  spec.add_development_dependency "rake", "~> 13.0"
-  spec.add_development_dependency "rubocop", "~> 0.80"
-  spec.add_development_dependency "rubocop-performance", "~> 1.5"
-  spec.add_development_dependency "vcr", "~> 5.1"
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "bundler-audit"
+  spec.add_development_dependency "dotenv"
+  spec.add_development_dependency "faker"
+  spec.add_development_dependency "minitest"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rubocop"
+  spec.add_development_dependency "rubocop-performance"
+  spec.add_development_dependency "vcr"
 end
