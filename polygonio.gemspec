@@ -31,15 +31,15 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "activesupport", [">= 6.0.2.2"]
-  spec.add_runtime_dependency "dry-struct", ["~> 1.2", ">= 1.2.0"]
-  spec.add_runtime_dependency "dry-types", ["~> 1.2", ">= 1.2.2"]
-  spec.add_runtime_dependency "eventmachine", ["~> 1.2", ">= 1.2.7"]
-  spec.add_runtime_dependency "faraday", ["~> 0.17", ">= 0.17.3"]
-  spec.add_runtime_dependency "faraday_middleware", ["~> 0.13", ">= 0.13.1"]
-  spec.add_runtime_dependency "faraday_middleware-parse_oj", ["~> 0.3", ">= 0.3.2"]
-  spec.add_runtime_dependency "oj", ["~> 3.10", ">= 3.10.1"]
-  spec.add_runtime_dependency "permessage_deflate", ["~> 0.1", ">= 0.1.4"]
-  spec.add_runtime_dependency "websocket-driver", ["~> 0.7", ">= 0.7.1"]
+  spec.add_runtime_dependency "dry-struct", [">= 1.2.0"]
+  spec.add_runtime_dependency "dry-types", [">= 1.2.2"]
+  spec.add_runtime_dependency "eventmachine", [">= 1.2.7"]
+  spec.add_runtime_dependency "faraday", [">= 0.17.3"]
+  spec.add_runtime_dependency "faraday_middleware", [">= 0.13.1"]
+  spec.add_runtime_dependency "faraday_middleware-parse_oj", [">= 0.3.2"]
+  spec.add_runtime_dependency "oj", [">= 3.10.1"]
+  spec.add_runtime_dependency "permessage_deflate", [">= 0.1.4"]
+  spec.add_runtime_dependency "websocket-driver", [">= 0.7.1"]
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "bundler-audit", "~> 0.6"
